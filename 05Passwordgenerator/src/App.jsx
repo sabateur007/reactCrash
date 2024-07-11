@@ -23,6 +23,7 @@ function App() {
 
 
   useEffect(()=>{passwordGenerator()},[passwordLength,numbersallow,charsallow,passwordGenerator])
+  
 
   return (
     <>
@@ -56,7 +57,7 @@ function App() {
           type='checkbox'
           defaultChecked= {numbersallow}
           id='numberInput'
-          onChange={()=>{setnumbersallow((prev)=!prev)}}
+          onChange={()=>{setnumbersallow((prev)=>!prev)}}
           />
           <label>numbers allowed</label>
         </div>
@@ -65,7 +66,7 @@ function App() {
           type='checkbox'
           defaultChecked= {charsallow}
           id='numberInput'
-          onChange={()=>{setcharsallow((prev)=!prev)}}
+          onChange={()=>{setcharsallow((prev)=>!prev)}}
           />
           <label>characters allowed</label>
         </div>
