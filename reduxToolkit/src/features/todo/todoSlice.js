@@ -1,6 +1,6 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-const initialstate = {
+const initialState = {
     todos: [
     {id: 1,
     todotext : "this is a task to do"}
@@ -8,9 +8,10 @@ const initialstate = {
 }
 
 export const todoSlice = createSlice({
-    name: todo,
+    name: "todo",
     initialState,
     reducers:{
+        
          addTodo: (state, action)=>{
             const todo = {
                 id : nanoid(),
