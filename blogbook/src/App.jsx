@@ -9,6 +9,7 @@ function App() {
 const [loading, setLoading] =  useState(true);
 console.log(loading);
 const dispatch = useDispatch()
+
 // useEffect(()=>{
 //   const fetchCurrectUser = async ()=>{
 //     console.log("inside fetch current user")
@@ -24,15 +25,18 @@ const dispatch = useDispatch()
 //           dispatch(logout())
 //           console.log("no user logged in")
 //       }
+//       setLoading(false);
 //     }
 //     catch (error) {
 //         console.log("Appwrite serive :: getCurrentUser :: error", error);
 //     }
-//     setLoading(false);
+   
 //   }
   
 //   console.log(loading)
 // },[])
+
+
 
 useEffect(() => {
   authService.getCurrentUser()
@@ -52,7 +56,7 @@ if(!loading){
   return(
     <>
    <Header />
-   <div>main</div>
+   <main>TODO::</main>
    <Footer />
     </>
   )
@@ -60,7 +64,7 @@ if(!loading){
 else{
   return(
     <>
-    <h1>cant load the app</h1>
+    <h1>please wait , we are loading the app.</h1>
     </>
   )
 }

@@ -2,9 +2,13 @@ import React from 'react'
 
 function Header() {
     return (
-        <div>
+        <>
+        <h1>
             header
-        </div>
+
+            </h1>
+            <Logoutbtn />
+            </>
     )
 }
 
